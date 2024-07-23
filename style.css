@@ -1,0 +1,267 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	list-style:none;
+	text-decoration:none;
+}
+body{
+	user-select:none;
+	overflow-x: hidden;
+}
+header{
+    background: #666;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+}header h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
+.animation-3{
+	min-height:90vh;
+	background:#434750;
+	position:relative;
+}
+.animation-3 .box1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+	transform-origin: left;
+    transform: rotateX(-20deg) rotateY(25deg) translateX(-50%);
+}
+.animation-3 .box1.anmited{
+	animation:box 5s infinite linear;
+	animation-fill-mode:forwards;
+}
+@keyframes box{
+	0%{
+		 transform: rotateX(-20deg) rotateY(0deg) translateX(-50%);
+	}
+	100%{
+		 transform: rotateX(-20deg) rotateY(360deg) translateX(-50%);
+	}
+}
+
+.animation-3 .box1 div{
+    background: #0348e4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+	
+}
+.animation-3 .box1  .face{
+    background: #0348e4;
+    position: absolute;
+    top: -75px;
+    transform: rotateX(90deg);
+}
+.animation-3 .box1:hover  div{
+	    background: #00000000;
+		border:10px solid #00ff00;
+}
+
+.animation-3 .box1  .back{
+    background: #000;
+    position: absolute;
+    top: 75px;
+    transform: rotateX(90deg);
+    box-shadow: 0 0 51px 12px #000;
+}
+
+.icons{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;	
+}
+
+.icons .iconsBox{
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: green;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;	
+}
+
+
+
+
+
+ /* 1201 بكسل وأكثر — شاشات كبيرة جدًا، تلفزيون */
+@media (min-width:1201px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1200px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1024px){
+
+}
+/* 481 بكسل - 768 بكسل: أجهزة iPad والأجهزة اللوحية */
+@media (max-width:768px){
+
+ 	
+}
+/* 320 بكسل - 480 بكسل: الأجهزة المحمولة */
+@media (max-width:480px){
+
+
+
+}
+/* End sectionMain page  */
+
+
+
+
+
+
+
+
+
+
+footer{
+
+	background:#343434;
+}
+
+footer .footer.containerFooter{
+		width:90%;
+		margin:0 auto;
+	
+}
+@media(max-width:667px){
+	footer .footer.containerFooter{
+		width:100%;
+		padding:10px;
+	}
+}
+footer .footer{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 20px;
+    direction: rtl;
+	
+}
+footer .footer >div{
+  font-family: "Amiri", serif;
+  font-size: 1rem;
+	padding:10px;
+
+	
+}
+@media(max-width:667px){
+	footer .footer >div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+}
+footer .footer >div h6{
+	    font-size: 22px;
+    font-weight: 600;
+	color:#fff;
+}
+footer .footer >div > ul{
+/* 	direction: rtl; */
+}
+footer .footer >div ul li{
+    margin: 2px 0;
+    padding: 3px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+footer .footer >div ul li a{
+    transition: 0.5s;
+    transform: translateX(0px);
+    display: block;
+    width: fit-content;
+	color:#fff;
+}
+footer .footer >div ul li a .imgcoderhub{
+    width: 50px;
+    transform: scale(1.5);
+    margin-right: 9px;
+}
+footer .footer >div ul li a i{
+	font-size: 1.5rem;
+}
+footer .footer >div ul li a:hover{
+    transform: translateX(-5px);
+}
+
+footer .sectionPage{
+	height:100px;
+	background:green;
+	border-top:2px solid red;
+}
+footer .sectionPage .langePageDivs{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row-reverse;
+    padding-right: 30px;
+    height: 50px;
+	direction: ltr;
+}
+footer .sectionPage .langePageDivs select{
+	width: 100px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+footer .sectionPage .majidDivs {
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .sectionPage .majidDivs h5{
+   font-family: "Amiri", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+footer .sectionPage .langePageDivs{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
